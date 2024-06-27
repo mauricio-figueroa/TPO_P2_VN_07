@@ -14,6 +14,9 @@ public class QueueOfStacks {
         int index = 0;
         while (!queueOfStacks.queue.isEmpty()) {
             Stack<Integer> stack = queueOfStacks.queue.poll();
+            System.out.println(stack);
+            int primerValor = stack.peek();
+            System.out.println("El primer valor de la pila es: " + primerValor);
             for (int i = 0; i < index && !stack.isEmpty(); i++) {
                 stack.pop();
             }

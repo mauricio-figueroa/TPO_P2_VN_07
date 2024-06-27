@@ -1,59 +1,37 @@
 package com.uade;
 
-
-import com.uade.exercise_1.QueueOfStacks;
-
-import java.util.*;
+import com.uade.exercise_3.QueueOfQueue;
+import com.uade.exercise_3.StaticQueue;
 
 public class Main {
     public static void main(String[] args) {
-        // Fill example matrix
-        QueueOfStacks matrix1 = new QueueOfStacks(fillMatrix(3, 3));
-        QueueOfStacks matrix2 = new QueueOfStacks(fillMatrix(3, 3));
-        QueueOfStacks matrix3 = new QueueOfStacks(fillMatrix(3, 3));
-        QueueOfStacks matrix4 = new QueueOfStacks(fillMatrix(3, 3));
+        QueueOfQueue qq1 = new QueueOfQueue();
+        QueueOfQueue qq2 = new QueueOfQueue();
+        QueueOfQueue qq3 = new QueueOfQueue();
 
-        System.out.println("Matrix 1: ");
-        matrix1.printMatrix();
+        StaticQueue queue1 = new StaticQueue();
+        queue1.add(10);
+        queue1.add(20);
+        queue1.add(30);
+        qq1.add(queue1);
 
-        // Calculate the trace of the first matrix
-        int trace = QueueOfStacks.calculateTrace(matrix1);
-        System.out.println("Trace of matrix 1: " + trace);
+        StaticQueue queue2 = new StaticQueue();
+        queue2.add(40);
+        queue2.add(50);
+        qq2.add(queue2);
 
-        System.out.println("Matrix 2: ");
-        matrix2.printMatrix();
+        StaticQueue queue3 = new StaticQueue();
+        queue3.add(60);
+        qq3.add(queue3);
 
-        // Get the transpose of the first matrix
-        QueueOfStacks transpose = QueueOfStacks.transpose(matrix2);
-        System.out.println("Transpose of matrix 2:");
-        transpose.printMatrix();
+        // Concatenar las colas
+        QueueOfQueue concatenatedQueue = new QueueOfQueue();
+        concatenatedQueue = concatenatedQueue.concatenate(qq1, qq2, qq3);
+        concatenatedQueue.displayQueues();
 
-        System.out.println("Matrix 3: ");
-        matrix3.printMatrix();
-        System.out.println("Matrix 4: ");
-        matrix4.printMatrix();
+        // Invertir con profundidad y mostrar
+        concatenatedQueue.reverseWithDepth().displayQueues();
 
-        // Obtain the sum of matrices 3 and 4
-        QueueOfStacks sumQueue = QueueOfStacks.sumMatrices(matrix3, matrix4);
-        System.out.println("Sum of matrices");
-        sumQueue.printMatrix();
+        concatenatedQueue.reverseWithDepth().flat().displayQueue();
     }
-
-    // fill a Matrix with random numbers in the range 1 to 9
-    private static Queue<Stack<Integer>> fillMatrix(int rows, int cols) {
-        Queue<Stack<Integer>> matrix = new LinkedList<>();
-        Random random = new Random();
-
-        for (int i = 0; i < rows; i++) {
-            Stack<Integer> row = new Stack<>();
-            for (int j = 0; j < cols; j++) {
-                int randomNumber = random.nextInt(9) + 1; // Generar número aleatorio en el rango de 1 a 99
-                row.push(randomNumber);
-            }
-            matrix.add(row);
-        }
-        return matrix;
-    }
-
-
 }
