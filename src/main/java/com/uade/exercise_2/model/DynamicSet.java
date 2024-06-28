@@ -12,8 +12,8 @@ public class DynamicSet implements Set {
 
     @Override
     public int choose() {
-        if(this.isEmpty()) { // C
-            throw new RuntimeException("No se puede obtener el elemento de un conjunto vacio"); // C
+        if(this.isEmpty()) { 
+            throw new RuntimeException("No se puede obtener el elemento de un conjunto vacio");
         }
         Random random = new Random();
         int index = random.nextInt(count);
@@ -33,7 +33,7 @@ public class DynamicSet implements Set {
 
     @Override
     public void add(int a) {
-        if(this.isEmpty()) { // C
+        if(this.isEmpty()) { 
             this.first = new Node(a, null);
             return;
         }

@@ -1,4 +1,4 @@
-package com.uade.exercise_2.utils;
+package com.uade.exercise_2;
 
 
 import com.uade.exercise_2.model.DynamicSet;
