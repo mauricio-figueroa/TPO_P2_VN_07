@@ -7,12 +7,15 @@ Este repositorio contiene las soluciónes al  Trabajo Práctico de la materia Pr
 En el repositorio encontrará 1 package por ejercicio nombrados "excercise_n" donde n es el numero de ejercicio
 Todos los ejercicios tienen comentarios aclarando funcionalidades o decisiones tomadas.
 
+Aclaraciones
+* El punto 5, en el metodo Montecarlo para aproximar pi, deje un test en MontecarloTest con las 1000 coordenadas y la aproximación de π.
+
 
 ## Participantes
 
 Los siguientes estudiantes han contribuido a este trabajo:
 - 
-- Ignacio Camporo (LU: 1116829)
+- Ignacio Camporro (LU: 1116829)
 - Elias Gantus (LU: 110701)
 - Mauricio Figueroa (LU: 1202116)
 - Camila Rosario Fabian (LU: 1153355)
