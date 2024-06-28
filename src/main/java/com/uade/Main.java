@@ -19,8 +19,5 @@ public class Main {
 
         System.out.println( " Elementos de la cola:");
         queue.display();
-
-
-
     }
 }
