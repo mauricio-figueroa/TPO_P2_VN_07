@@ -15,7 +15,7 @@ Aclaraciones
 
 Los siguientes estudiantes han contribuido a este trabajo:
 - 
-- Ignacio Camporo (LU: 1116829)
+- Ignacio Camporro (LU: 1116829)
 - Elias Gantus (LU: 110701)
 - Mauricio Figueroa (LU: 1202116)
 - Camila Rosario Fabian (LU: 1153355)

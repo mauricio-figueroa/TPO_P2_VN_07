@@ -1,10 +1,7 @@
 package com.uade;
 
-import com.uade.exercise_3.QueueOfQueue;
 import com.uade.exercise_4.StaticQueue;
-import com.uade.exercise_4.Set;
-import com.uade.exercise_4.StaticSet;
-import com.uade.exercise_4.StaticStack;
+
 
 public class Main {
     public static void main(String[] args) {
