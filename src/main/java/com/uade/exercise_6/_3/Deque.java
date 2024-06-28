@@ -67,6 +67,19 @@ public class Deque {
     }
 
 
+    public int getFirst() {
+        if(this.isEmpty()) {
+            throw new RuntimeException("No se puede obtener el primero de una cola vacia");
+        }
+        return this.head.getValue();
+    }
+
+    public int getLast() {
+        if(this.isEmpty()) {
+            throw new RuntimeException("No se puede obtener el primero de una cola vacia");
+        }
+        return this.tail.getValue();
+    }
     public boolean isEmpty() {
         return size == 0;
     }

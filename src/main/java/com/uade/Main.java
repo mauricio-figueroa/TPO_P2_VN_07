@@ -98,6 +98,9 @@ public class Main {
         deque.addFirst(0);
         deque.addLast(3);
 
+        System.out.println("first" + deque.getFirst());
+        System.out.println("last" + deque.getLast());
+
         System.out.println("\nSaco el primero: " + deque.removeFirst());
         System.out.println("Saco el ultimo: " + deque.removeLast());
         System.out.println("Saco el primero: " + deque.removeFirst());
