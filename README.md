@@ -15,7 +15,7 @@ Aclaraciones
 
 Los siguientes estudiantes han contribuido a este trabajo:
 - 
-- Ignacio Camporro (LU: 1116829)
-- Elias Gantus (LU: 110701)
-- Mauricio Figueroa (LU: 1202116)
-- Camila Rosario Fabian (LU: 1153355)
+- Ignacio Camporro (LU: 1116829) Ejercicio 3, 4 y 7
+- Elias Gantus (LU: 110701) Ejercicio 6
+- Mauricio Figueroa (LU: 1202116) Ejercicio 1, 2 y 5
+- Camila Rosario Fabian (LU: 1153355) Ejercicio 7
