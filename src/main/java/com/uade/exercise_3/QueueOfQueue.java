@@ -76,10 +76,11 @@ public class QueueOfQueue implements IQueueOfQueue {
         StaticStack queueIndices = new StaticStack();
         StaticStack tempStack = new StaticStack();
 
+        //Apilo los índices
         for (int i = 0; i < count; i++) {
             queueIndices.add(i);
         }
-
+        // Acá lo mismo pero para el contenido
         while (!queueIndices.isEmpty()) {
             int queueIndex = queueIndices.getTop();
             queueIndices.remove();
@@ -89,6 +90,7 @@ public class QueueOfQueue implements IQueueOfQueue {
                 tempStack.add(currentQueue.getFirst());
                 currentQueue.remove();
             }
+            // desapilo para revertir el contenido
             while (!tempStack.isEmpty()) {
                 currentQueue.add(tempStack.getTop());
                 tempStack.remove();
@@ -97,9 +99,6 @@ public class QueueOfQueue implements IQueueOfQueue {
         }
         return reversedQueueOfQueue;
     }
-
-
-
 
 }
 

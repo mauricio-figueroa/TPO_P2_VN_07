@@ -1,20 +1,29 @@
 package com.uade;
 
-import com.uade.exercise_4.StaticQueue;
-
+import com.uade.exercise_7.StaticPriorityQueue;
 
 public class Main {
     public static void main(String[] args) {
+        // Crear una instancia de StaticPriorityQueue
+        StaticPriorityQueue priorityQueue = new StaticPriorityQueue();
 
-// Crear una instancia de StaticQueue usando el Builder
-        StaticQueue queue = StaticQueue.builder()
-                .add(10)
-                .add(20)
-                .add(30)
-                .addAll(40, 50, 60)
-                .build();
+        // Agregar elementos con sus prioridades
+        priorityQueue.add(10, 3);
+        priorityQueue.add(20, 10);
+        priorityQueue.add(30, 21);
+        priorityQueue.add(40, 14);
+        priorityQueue.add(50, 4);
 
-        System.out.println( " Elementos de la cola:");
-        queue.display();
+
+
+        // Actualizar la prioridad del elemento con valor 20 a una nueva prioridad 4
+        priorityQueue.updatePriority(3, 11);
+
+
+
+
+
     }
+
+
 }
