@@ -45,12 +45,7 @@ public class StaticQueue implements Queue {
     public int getCount() {
         return count;
     }
-    public int getElementAt(int index) {
-        if (index < 0 || index >= count) {
-            throw new IndexOutOfBoundsException("Índice fuera de rango");
-        }
-        return array[index];
-    }
+
     public void displayQueue() {
         if (isEmpty()) {
             System.out.println("La cola está vacía.");

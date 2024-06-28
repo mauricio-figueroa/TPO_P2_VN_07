@@ -62,50 +62,44 @@ public class QueueOfQueue implements IQueueOfQueue {
         StaticQueue flatQueue = new StaticQueue();
         for (int i = 0; i < count; i++) {
             StaticQueue currentQueue = queueOfQueues[i];
-            for (int j = 0; j < currentQueue.getCount(); j++) {
-                flatQueue.add(currentQueue.getElementAt(j));
+            while (!currentQueue.isEmpty()) {
+                flatQueue.add(currentQueue.getFirst());
+                currentQueue.remove();
             }
         }
         return flatQueue;
     }
 
-
-
     @Override
     public QueueOfQueue reverseWithDepth() {
-        QueueOfQueue reversedQueue = new QueueOfQueue();
-        for (int i = count - 1; i >= 0; i--) {
-            StaticQueue currentQueue = queueOfQueues[i];
-            int n = currentQueue.getCount();
-            int[] reversedElements = new int[n];
+        QueueOfQueue reversedQueueOfQueue = new QueueOfQueue();
+        StaticStack queueIndices = new StaticStack();
+        StaticStack tempStack = new StaticStack();
 
-            for (int j = 0; j < n; j++) {
-                reversedElements[j] = currentQueue.getElementAt(n - j - 1);
-            }
-            StaticQueue reversedStaticQueue = new StaticQueue();
-            for (int j = 0; j < n; j++) {
-                reversedStaticQueue.add(reversedElements[j]);
-            }
-            reversedQueue.add(reversedStaticQueue);
-        }
-
-        return reversedQueue;
-    }
-
-
-    public void displayQueues() {
-        if (isEmpty()) {
-            System.out.println("La cola de colas está vacía.");
-            return;
-        }
         for (int i = 0; i < count; i++) {
-            System.out.print("Cola " + (i + 1) + ": ");
-            StaticQueue currentQueue = queueOfQueues[i];
-            for (int j = 0; j < currentQueue.getCount(); j++) {
-                System.out.print(currentQueue.getElementAt(j) + " ");
-            }
-            System.out.println();
+            queueIndices.add(i);
         }
+
+        while (!queueIndices.isEmpty()) {
+            int queueIndex = queueIndices.getTop();
+            queueIndices.remove();
+            StaticQueue currentQueue = queueOfQueues[queueIndex];
+
+            while (!currentQueue.isEmpty()) {
+                tempStack.add(currentQueue.getFirst());
+                currentQueue.remove();
+            }
+            while (!tempStack.isEmpty()) {
+                currentQueue.add(tempStack.getTop());
+                tempStack.remove();
+            }
+            reversedQueueOfQueue.add(currentQueue);
+        }
+        return reversedQueueOfQueue;
     }
+
+
+
+
 }
 

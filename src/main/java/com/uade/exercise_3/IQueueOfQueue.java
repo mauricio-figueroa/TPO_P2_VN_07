@@ -53,8 +53,5 @@ public interface IQueueOfQueue {
      */
     int getCount();
 
-    /**
-     * Muestra por consola el contenido de todas las colas dentro de la estructura.
-     */
-    void displayQueues();
+
 }
