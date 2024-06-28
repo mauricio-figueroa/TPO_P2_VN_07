@@ -1,4 +1,4 @@
-package com.uade.exercise_5;
+package com.uade.exercise_5.algoritmo;
 
 import com.uade.exercise_5.model.IStack;
 import com.uade.exercise_5.model.Stack;
